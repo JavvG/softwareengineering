@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventario - Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="glass">
+        <div class="header-content">
+            <h1>Gestión de Inventario</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home header-icon"></i>Inicio</a></li>
+                    <li><a href="catalogo.html"><i class="fas fa-th-list header-icon"></i>Catálogo</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-in-alt header-icon"></i>Iniciar Sesión</a></li>
+                    <li><a href="registro.html"><i class="fas fa-user-plus header-icon"></i>Registro</a></li>
+                    <li><a href="carrito.html"><i class="fas fa-shopping-cart header-icon"></i>Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="glass">
+        <section>
+            <h2>Inventario</h2>
+            <form>
+                <label for="producto">Nombre del Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+
+                <button type="submit">Actualizar Inventario</button>
+            </form>
+        </section>
+    </main>
+    <footer class="glass">
+        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

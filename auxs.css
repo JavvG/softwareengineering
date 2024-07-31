@@ -1,0 +1,399 @@
+/* General Styles */
+body {
+    font-family: 'SF UI Display', Arial, sans-serif;
+    color: #fff;
+    background: #000000; /* Dark background for the whole page */
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para la barra de navegación */
+    backdrop-filter: blur(10px); /* Efecto de blur en el fondo de la barra de navegación */
+    padding: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil en la barra de navegación */
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; /* Espacio a los lados de la barra de navegación */
+}
+
+.left-icons, .nav-icons, .right-icons {
+    display: flex;
+    align-items: center;
+}
+
+.store-name {
+    margin-right: 40px;
+    font-size: 1.3em;
+    color: #fff;
+}
+
+.nav-icons a, .right-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+i {
+    margin-right: 8px !important;
+}
+
+.nav-icons a:hover, .right-icons a:hover {
+    color: #4CAF50; /* Color verde para el hover */
+    transform: scale(1.1); /* Efecto de aumento en el hover */
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px;
+    border-radius: 12px; /* Bordes más redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-right: 0;
+    width: 250px; /* Ajustar tamaño según tus necesidades */
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.search-bar::placeholder {
+    color: #fff;
+}
+
+.search-bar:focus {
+    background: rgba(255, 255, 255, 0.2); /* Efecto al enfocar el campo de búsqueda */
+    border-color: #28a745; /* Color verde para el borde al enfocar */
+}
+
+.search-button {
+    border-radius: 12px; /* Bordes más redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+    background: #218838 !important; /* Verde más oscuro para el hover */
+    transform: scale(1.05); /* Efecto de aumento en el hover */
+}
+
+/* Estilos de los botones */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px; /* Bordes más redondeados */
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.9em;
+    margin: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button .bi {
+    margin-right: 5px;
+}
+
+button:nth-of-type(1) {
+    background: #007BFF; /* Azul para el botón de detalles */
+}
+
+button:nth-of-type(2) {
+    background: #28a745; /* Verde para el botón de agregar al carrito */
+}
+
+button:nth-of-type(3) {
+    background: #dc3545; /* Rojo para el botón de eliminar del carrito */
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05); /* Efecto de aumento en el hover */
+}
+
+/* Botón de inicio de sesión */
+.left-icons a {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 12px; /* Bordes más redondeados */
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.left-icons a:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05); /* Efecto de aumento en el hover */
+}
+
+/* Estilo del botón del carrito */
+.right-icons a {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 16px;
+    border-radius: 12px; /* Bordes más redondeados */
+    font-size: 1.2em;
+    color: #fff;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.right-icons a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); /* Efecto de aumento en el hover */
+    transition: background 0.3s, transform 0.3s;
+}
+
+/* Product Gallery */
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    width: 220px; /* Ajustado para ser un poco más grande */
+    border-radius: 34px; /* Bordes ligeramente redondeados */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Efecto de blur similar al de la barra de navegación y el footer */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Leve elevación al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px; /* Asegura que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover;
+    border-radius: 24px; /* Bordes ligeramente redondeados para la imagen */
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.product-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para el footer */
+    backdrop-filter: blur(10px); /* Efecto de blur en el fondo del footer */
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil en el footer */
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    font-size: small;
+    font-weight: lighter;
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-label {
+    font-size: 0.9em;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.filter-dropdown {
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 0.9em;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.filter-dropdown:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #28a745;
+}
+
+/* Carousel Banner */
+.carousel-inner {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 60vh; /* Ajustar la altura del banner */
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    padding: 20px;
+    border-radius: 12px; /* Bordes más redondeados */
+}
+
+.carousel-caption h5 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.carousel-caption .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px; /* Bordes más redondeados */
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.9em;
+    margin: 5px;
+    transition: background 0.3s, transform 0.3s;
+    background: #007BFF; /* Azul para los botones del banner */
+}
+
+.carousel-caption .btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05); /* Efecto de aumento en el hover */
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-icons, .right-icons {
+        margin-top: 10px;
+    }
+
+    .product-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    .carousel-item img {
+        height: 40vh; /* Altura del banner ajustada para móviles */
+    }
+}
+
+
+/* Estilos del Carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de blur */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%; /* Botones circulares */
+    color: #fff;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1000; /* Asegura que los botones estén sobre el contenido */
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.5); /* Fondo más oscuro en el hover */
+    transform: scale(1.1); /* Efecto de aumento en el hover */
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button i {
+    margin: 0; /* Ajusta el ícono a la posición central del botón */
+}

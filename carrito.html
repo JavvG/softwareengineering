@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="glass">
+        <div class="header-content">
+            <h1>Carrito de Compras</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home header-icon"></i>Inicio</a></li>
+                    <li><a href="catalogo.html"><i class="fas fa-th-list header-icon"></i>Catálogo</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-in-alt header-icon"></i>Iniciar Sesión</a></li>
+                    <li><a href="registro.html"><i class="fas fa-user-plus header-icon"></i>Registro</a></li>
+                    <li><a href="carrito.html"><i class="fas fa-shopping-cart header-icon"></i>Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="glass">
+        <section>
+            <h2>Contenido del Carrito</h2>
+            <div class="product-gallery">
+                <!-- Muestra los productos en el carrito aquí -->
+                <div class="product-card glass">
+                    <img src="img/producto1.jpg" alt="Producto en Carrito">
+                    <div class="product-info">
+                        <h3>Producto en Carrito</h3>
+                        <p>$20.00</p>
+                        <button><i class="fas fa-trash-alt"></i> Eliminar</button>
+                    </div>
+                </div>
+                <!-- Repite el bloque .product-card para más productos en el carrito -->
+            </div>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </section>
+    </main>
+    <footer class="glass">
+        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
