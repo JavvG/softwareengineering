@@ -107,30 +107,22 @@
     <footer>
         <p>&copy; 2024 - JG Designs & Software Engineering</p>
     </footer>
+    <script src="scripts.js"></script>
     <script>
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-images img');
-            if (index >= slides.length) currentSlide = 0;
-            if (index < 0) currentSlide = slides.length - 1;
-            slides.forEach((slide, i) => {
-                slide.style.transform = `translateX(${-currentSlide * 100}%)`;
-            });
-        }
-
-        function nextSlide() {
-            currentSlide++;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide--;
-            showSlide(currentSlide);
-        }
-
-        // Inicializar el carrusel
-        showSlide(currentSlide);
+        // JavaScript para ocultar los iconos al hacer scroll
+        window.onscroll = function() {
+            let header = document.querySelector('header');
+            let storeName = document.querySelector('.store-name');
+            let loginButton = document.querySelector('.left-icons a');
+    
+            if (window.pageYOffset > 50) { // Ajusta el valor según la altura desde donde quieras ocultar
+                storeName.style.display = 'none';
+                loginButton.style.display = 'none';
+            } else {
+                storeName.style.display = 'flex';
+                loginButton.style.display = 'inline-flex';
+            }
+        };
     </script>
 </body>
 </html>

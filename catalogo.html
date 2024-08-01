@@ -217,6 +217,22 @@
         // Inicializar el carrusel
         showSlide(currentSlide);
     </script>
+    <script>
+        // JavaScript para ocultar los iconos al hacer scroll
+        window.onscroll = function() {
+            let header = document.querySelector('header');
+            let storeName = document.querySelector('.store-name');
+            let loginButton = document.querySelector('.left-icons a');
+    
+            if (window.pageYOffset > 50) { // Ajusta el valor según la altura desde donde quieras ocultar
+                storeName.style.display = 'none';
+                loginButton.style.display = 'none';
+            } else {
+                storeName.style.display = 'flex';
+                loginButton.style.display = 'inline-flex';
+            }
+        };
+    </script>
     
 </body>
 </html>

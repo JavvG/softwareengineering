@@ -755,3 +755,62 @@ footer p {
 }
 
 
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 80px;
+    }
+
+    .left-icons {
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .left-icons a {
+        font-size: 0.9em; /* Reducción del tamaño del texto en móviles */
+        padding: 5px 10px; /* Más compacto */
+    }
+
+    .store-name {
+        font-size: 0.9em; /* Reducción del tamaño del nombre de la tienda */
+    }
+
+    .right-icons {
+        padding: 10px;
+    }
+
+    .right-icons a {
+        font-size: 1.05em; /* Reducción del tamaño de los iconos en la derecha */
+        margin: 0;
+        padding: 5px 10px; /* Más compacto */
+    }
+
+    .search-bar {
+        padding: 5px;
+        border-radius: 8px;
+        width: calc(100% - 20px); /* Se asegura que la barra de búsqueda ocupe todo el ancho disponible */
+    }
+
+    .search-button {
+        display: none; /* Mantiene el botón de búsqueda oculto en móviles */
+    }
+
+    /* Ajustes para la ventana emergente (modal) */
+
+    .modal {
+        width: 100%;
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        max-width: 75vw;
+        margin-top: 30vh;
+    }
+
+    footer {
+        position: static; /* El footer será estático en pantallas pequeñas */
+        box-shadow: none; /* Opcional: quitar la sombra si deseas */
+        margin-bottom: 0;
+    }
+}
