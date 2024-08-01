@@ -275,7 +275,7 @@ footer p {
     margin-right: 10px;
 }
 
-.filter-dropdown {
+.filter-dropdown, .shipping-select {
     padding: 8px !important; 
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.5) !important;
@@ -286,12 +286,12 @@ footer p {
     transition: background 0.3s, border-color 0.3s;
 }
 
-.filter-dropdown:focus {
+.filter-dropdown:focus, .shipping-select:focus {
     background: rgba(255, 255, 255, 0.2);
     border-color: #28a745; /* Color verde para el borde al enfocar */
 }
 
-.filter-dropdown option {
+.filter-dropdown option, .shipping-select option {
     background: rgba(0, 0, 0, 0.9);
 }
 
@@ -525,6 +525,137 @@ footer p {
     transform: scale(1.05); /* Efecto de aumento en el hover */
 }
 
+/* Contenedor del Carrito */
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado del Carrito */
+.cart-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cart-header h1 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Contenido del Carrito */
+.cart-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Product Card */
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 32px; /* Bordes más redondeados para el contenedor del producto */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);  /* Efecto de blur similar al resto de la interfaz */
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.cart-item img {
+    width: 100px; /* Ajustar el tamaño de las imágenes */
+    height: 100px; /* Asegura que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover;
+    border-radius: 24px; /* Bordes redondeados para las imágenes */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.item-controls {
+    display: flex;
+    flex-direction: row; /* Para alinear verticalmente los controles */
+    align-items: center; /* Centramos los controles */
+    padding: 10px;
+}
+
+.quantity-btn, .remove-btn {
+    width: 100%; /* Hacer que los botones ocupen el ancho disponible */
+    margin: 5px; /* Espacio vertical entre botones */
+    padding: 4px 12px;
+}
+
+.remove-btn {
+    padding: 10px;
+}
+
+.quantity-input {
+    width: 10px; /* Tamaño fijo para el input de cantidad */
+    text-align: center; /* Centrar el texto dentro del input */
+    margin: 5px;
+    border-radius: 18px;
+    padding: 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Summary Section */
+.cart-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centramos todo el contenido del resumen */
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    width: 30vw;
+}
+
+.summary-item {
+    margin: 10px 0; /* Espacio entre los elementos del resumen */
+}
+
+.cart-summary p {
+    font-size: x-small;
+    font-weight: lighter;
+}
+
+.shipping-select, .checkout-btn {
+    width: 100%; /* Hacer que el desplegable y el botón ocupen el ancho disponible */
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background: #007BFF; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 10px;
+    font-size: 1.35em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    width: 20vw;
+}
+
+.checkout-btn:hover {
+    background: #0056b3; /* Color más oscuro al hacer hover */
+    transform: scale(1.05); /* Efecto de aumento al hacer hover */
+}
+
+/* Cart Footer */
+.cart-footer {
+    display: flex;
+    justify-content: center; /* Centramos el botón de compra */
+    margin-top: 20px;
+}
+
 
 
 /* Mobile Styles */
@@ -610,6 +741,16 @@ footer p {
         position: static; /* El footer será estático en pantallas pequeñas */
         box-shadow: none; /* Opcional: quitar la sombra si deseas */
         margin-bottom: 0;
+    }
+
+    .cart-summary {
+        width: 70vw;
+    }
+
+    .checkout-btn {
+        width: 40vw;
+        border-radius: 28px;
+        padding: 10px;
     }
 }
 

@@ -3,46 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras - Tienda Online</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style2.css">
+    <title>Carrito de compras</title>
 </head>
 <body>
-    <header class="glass">
-        <div class="header-content">
-            <h1>Carrito de Compras</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-home header-icon"></i>Inicio</a></li>
-                    <li><a href="catalogo.html"><i class="fas fa-th-list header-icon"></i>Catálogo</a></li>
-                    <li><a href="login.html"><i class="fas fa-sign-in-alt header-icon"></i>Iniciar Sesión</a></li>
-                    <li><a href="registro.html"><i class="fas fa-user-plus header-icon"></i>Registro</a></li>
-                    <li><a href="carrito.html"><i class="fas fa-shopping-cart header-icon"></i>Carrito</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="glass">
-        <section>
-            <h2>Contenido del Carrito</h2>
-            <div class="product-gallery">
-                <!-- Muestra los productos en el carrito aquí -->
-                <div class="product-card glass">
-                    <img src="img/producto1.jpg" alt="Producto en Carrito">
-                    <div class="product-info">
-                        <h3>Producto en Carrito</h3>
-                        <p>$20.00</p>
-                        <button><i class="fas fa-trash-alt"></i> Eliminar</button>
-                    </div>
-                </div>
-                <!-- Repite el bloque .product-card para más productos en el carrito -->
+    <header>
+        <nav class="nav-container">
+            <div class="left-icons">
+                <span class="store-name">
+                    <i class="bi bi-shop" style="font-size: 1.5em; margin-right: 8px;"></i>Tienda Online
+                </span>
+                <a href="login.html"><i class="bi bi-person"></i>Iniciar Sesión</a>
             </div>
-            <button class="checkout-btn">Proceder al Pago</button>
-        </section>
+            <div class="nav-icons">
+                <a href="index.html"><i class="bi bi-house"></i>Inicio</a>
+                <a href="catalogo.html"><i class="bi bi-grid"></i>Catálogo</a>
+            </div>
+            <div class="right-icons">
+                <form action="#" method="get" class="search-form">
+                    <input type="text" placeholder="Buscar productos..." class="search-bar">
+                    <button type="submit" class="search-button"><i class="bi bi-search"></i></button>
+                </form>
+                <a href="carrito.html"><i class="bi bi-cart"></i>Carrito</a>
+            </div>
+        </nav>
+    </header>
+    <main class="cart-container">
+        <div class="cart-header">
+            <h1>Contenido de su carrito de compras</h1>
+        </div>
+        <div class="cart-content">
+            <div class="cart-item">
+                <img src="img/producto1.jpg" alt="Producto 1">
+                <h2>Producto 1</h2>
+                <h3>$10.00</h3>
+                <div class="item-controls">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" value="1" class="quantity-input">
+                    <button class="quantity-btn">+</button>
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="img/producto2.jpg" alt="Producto 2">
+                <h2>Producto 2</h2>
+                <h3>$20.00</h3>
+                <div class="item-controls">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" value="1" class="quantity-input">
+                    <button class="quantity-btn">+</button>
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="img/producto3.jpg" alt="Producto 3">
+                <h2>Producto 3</h2>
+                <h3>$20.00</h3>
+                <div class="item-controls">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" value="1" class="quantity-input">
+                    <button class="quantity-btn">+</button>
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="img/producto4.jpg" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <h3>$20.00</h3>
+                <div class="item-controls">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" value="1" class="quantity-input">
+                    <button class="quantity-btn">+</button>
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </div>
+
+            <!-- Añade más productos aquí -->
+        </div>
+        <div class="cart-summary">
+            <!-- <div class="summary-item">
+                <label for="shipping-method">Método de Envío:</label>
+                <select id="shipping-method" class="shipping-select">
+                    <option value="none">Seleccione un servicio</option>
+                    <option value="standard">Envío Estándar - $250.00</option>
+                    <option value="express">Envío Exprés - $150.00</option>
+                    <option value="overnight">Envío Nocturno - $300.00</option>
+                </select>
+            </div> -->
+            <div class="summary-item">
+                <h2><strong>Total:</strong> $70.00</h2>
+            </div>
+            <p>*El importe de la compra se actualizará cuando complete los datos de envío.</p>
+        </div>
+        <div class="cart-footer">
+            <button class="checkout-btn">
+                <i class="fas fa-shopping-cart"></i> Realizar Compra
+            </button>
+        </div>
     </main>
-    <footer class="glass">
-        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+    <footer>
+        <p>&copy; 2024 - JG Designs & Software Engineering</p>
     </footer>
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${-currentSlide * 100}%)`;
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Inicializar el carrusel
+        showSlide(currentSlide);
+    </script>
 </body>
 </html>
